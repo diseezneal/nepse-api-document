@@ -7,7 +7,7 @@ Thanks to [aeruhxi](https://github.com/aeruhxi) for helping me with this.
 
 ## First thing first, Getting the access token.
 
-Send a GET request to the api endpoint `https://newweb.nepalstock.com.np/api/authenticate/prove` to get the required details.
+Send a GET request to the api endpoint `https://nepalstock.com.np/api/authenticate/prove` to get the required details.
 
 The response should look like this.
 
@@ -64,9 +64,9 @@ let validRefreshToken = refreshToken.slice(0, num3) + refreshToken.slice(num3 + 
 
 ## getting some random id that is sent in the body for requests
 
-Now, you will need to make a GET request to the endpoint `https://newweb.nepalstock.com.np/api/nots/nepse-data/market-open` with Authorization header as `Salter ${validAccessToken}` as shown below
+Now, you will need to make a GET request to the endpoint `https://nepalstock.com.np/api/nots/nepse-data/market-open` with Authorization header as `Salter ${validAccessToken}` as shown below
 ```javascript
-fetch("https://newweb.nepalstock.com.np/api/nots/nepse-data/market-open", {
+fetch("https://nepalstock.com.np/api/nots/nepse-data/market-open", {
   "headers": {
     "authorization": `Salter ${validAccessToken}`,
   },
@@ -102,7 +102,7 @@ let id = dummyData[dummyDataId] + dummyDataId + 2 * datePart;
 this id is now supposed to use in the body of the request of today-price as shown below
 
 ```javascript
-fetch("https://newweb.nepalstock.com.np/api/nots/nepse-data/today-price", {
+fetch("https://nepalstock.com.np/api/nots/nepse-data/today-price", {
   "headers": {
     "authorization": `Salter ${validAccessToken}`,
     "content-type": "application/json",
